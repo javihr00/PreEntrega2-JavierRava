@@ -1,0 +1,347 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+/* HEADER */
+
+header{
+    text-align: center;
+}
+
+header img{
+    margin: 5px 0px;
+    width: 250px;    
+}
+
+nav{
+    background-color: #543000;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 5px 10px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* MAIN */
+
+h1{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+    /* Main Index */
+
+.mainIndex{
+    text-align: center;
+}
+
+.mainIndexPrincipal h1, .mainIndexPrincipal p{
+    margin: 15px;
+}
+
+.mainIndexSecundaria div{
+    display: inline-block;
+    margin: 20px 48px;
+    padding: 15px 10px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    background-color: #fffdf9;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.mainIndexSecundaria h2, .mainIndexSecundaria p{
+    margin: 3px;
+}
+
+.mainIndexSecundaria a{
+    color: black;
+    text-decoration: none;
+}
+
+.mainIndex p span{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+    /* Main productos */
+
+.mainProductos{
+    text-align: center;
+}
+
+.boxProductos{
+    display: inline-block;
+    margin: 10px;
+}
+
+.boxProductos img{
+    width: 400px;
+    padding: 10px;
+    border-radius: 15% 15% 0% 0%;
+}
+
+.boxProductos div{
+    padding: 10px 20px;
+    cursor: default;
+    text-align: left;
+}
+
+.boxProductos div h2{
+    margin-bottom: 3px;
+}
+
+.boxProductos div ul li{
+    list-style: none;
+}
+
+        /* > productos individuales*/
+#idImgBrasil{
+    border: 3px solid #7DBD33;
+}
+
+#idImgColombia{
+    border: 3px solid #FA9D12;
+}
+
+#idImgMoka{
+    border: 3px solid #27BBA1;
+}
+
+#idImgItaliano{
+    border: 3px solid black;
+}
+
+#idTextBrasil{
+    background-color: #7DBD33;
+}
+
+#idTextColombia{
+    background-color: #FA9D12;
+}
+
+#idTextMoka{
+    background-color: #27BBA1;
+}
+
+#idTextItaliano{
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+    /* Main locales */
+
+.mainLocales{
+    margin: 0px 5px;
+    text-align: center;    
+}
+
+.mainLocales h1{
+    margin: 30px 0px;
+}
+
+.boxLocales1, .boxLocales2{
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.imgLocales{
+    width: 700px;
+}
+
+.textLocales{
+    background-color: #8a4e0080;
+    width: 700px;
+    height: 150px;
+    padding: 15px;
+    text-align: left;
+}
+
+.textLocales h4{
+    margin-bottom: 7px;
+}
+
+.textLocales span{
+    font-weight: 600;
+}
+
+
+    /* Main comunidad */
+
+.comunidadTextPrincipal{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.comunidadTextPrincipal p{
+    font-size: 18px;
+    margin: 5px 0px;
+    font-weight: 500;
+    color: #A85F00
+}
+
+.comunidadMedia{
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.comunidadMedia div{
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+.comunidadMedia div h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.comunidadSuscripcion{
+    margin: 20px 0px 30px;
+    text-align: center;
+}
+
+.comunidadSuscripcion input, .comunidadSuscripcion button{
+    width: 300px;
+    height: 35px;
+    margin: 3px;
+    font-size: 16px;
+    border: 1px solid #00000060;
+    border-radius: 5px;
+}
+
+.comunidadSuscripcion input{
+    margin-top: 10px;
+}
+
+.comunidadSuscripcion button{
+    background-color: #ffcc40;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+    /* Main quienessomos */
+
+.boxQuienessomos{
+    margin: 50px auto;
+    padding: 0px 30px;
+    max-width: 1000px;
+    border: 2px solid rgb(212, 212, 212);
+    background-color: rgba(245, 245, 245, 0.5);
+}
+
+.boxQuienessomos p{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 18px;
+    font-weight: 500;    
+}
+
+#idTextqs1, #idTextqs3{
+    color: #a85f00
+}
+
+#idTextqs2, #idTextqs4{
+    color: #7a4500
+}
+
+.boxQuienessomos img{
+    width: 250px;
+    display: block;
+    margin: 50px auto 20px;
+    text-align: center;
+}
+
+
+    /* Main contacto */
+
+.sectionDataContacto{
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sectionDataContacto h3{
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+.sectionDataContacto h4, .sectionDataContacto p{
+    margin: 3px;
+}
+
+.sectionDataContacto a{
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+}
+
+#idFormContacto{
+    max-width: 660px;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 5px;
+    border: 3px solid #54300057; 
+    background-color: #eba54a52;
+}
+
+#idFormContacto div{
+    margin: 7px;
+    display: inline-block;
+}
+
+.formInputData, .formTextareaData{
+    width: 300px;
+    border-radius: 5px;
+    border-color: rgb(150, 150, 150);
+}
+
+.formTextareaData{
+    height: 150px;
+}
+
+.formButton{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #ffc375;
+    border-color: rgba(150, 150, 150, 0.5);
+    cursor: pointer;
+}
+
+#idFormContacto legend{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding: 10px;
+}
+
+footer hr{
+    margin: 20px 0px;
+}
+
+footer h3{
+    margin: 30px 0px 20px 0px;
+    font-size: 18px;
+    text-align: center;
+}
