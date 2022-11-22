@@ -1,5 +1,7 @@
 /* reset */
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,87 +11,198 @@
 
 /* HEADER */
 
+
 header{
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffd092;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.10);
+    z-index: 100;
 }
 
 header img{
-    margin: 5px 0px;
-    width: 250px;    
+    margin: 10px 5px;
+    width: 150px;    
 }
 
-nav{
-    background-color: #543000;
+.focusMenuColor{
+    font-weight: bold;
 }
 
-nav ul li{
-    display: inline-block;
-    margin: 5px 10px;
-    list-style: none;
+.navbar-nav a{
+    font-size: 18px;
+    margin: 0px 10px;
 }
 
-nav ul li a{
-    color: whitesmoke;
-    text-decoration: none;
+.navbar-nav a:hover{
+    font-weight: bold;
 }
+
 
 /* MAIN */
 
 h1{
     text-align: center;
     margin: 30px 0px;
+    font-family: Amatic SC, Open Sans;
+    font-size: 64px;
 }
 
     /* Main Index */
 
 .mainIndex{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .mainIndexPrincipal h1, .mainIndexPrincipal p{
-    margin: 15px;
+    text-align: center;
+}
+
+.mainIndexPrincipal p span{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.mainIndexSecundaria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 50px 0px 0px 0px;
+    gap: 50px;    
 }
 
 .mainIndexSecundaria div{
-    display: inline-block;
-    margin: 20px 48px;
-    padding: 15px 10px;
-    width: 250px;
-    height: 100px;
-    text-align: center;
-    background-color: #fffdf9;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin: 20px 10px;
+    width: 450px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); 
     border-radius: 10px;
+    transition: 0.4s;
 }
 
-.mainIndexSecundaria h2, .mainIndexSecundaria p{
-    margin: 3px;
+.mainIndexSecundaria p{
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.75); 
+    width: 250px;
+    min-width: 250px;
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    padding: 5px 10px;
 }
+
+.indexBoxSpanText{
+    display:block;
+    font-size: 1.5rem;
+}
+
+.indexBoxProductos{
+    background-image: url(../img/boxproductos.png);
+}
+
+.indexBoxLocales{
+    background-image: url(../img/boxcafeteria.jpg);
+}
+
+.indexBoxComunidad{
+    background-image: url(../img/boxcomunidad.jpg);
+}
+
+.imgBox{
+    background-size: cover;
+    background-position: center;
+}
+
+.mainIndexSecundaria div:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 14px 28px;
+}
+
 
 .mainIndexSecundaria a{
     color: black;
     text-decoration: none;
 }
 
-.mainIndex p span{
-    font-style: italic;
-    font-weight: bold;
+
+@media screen and (min-width:500px){
+    .mainIndexSecundaria500px{
+        display: none;
+    }
 }
 
+@media screen and (max-width:500px){
+
+    .mainIndexSecundaria{
+        display:none;
+    }
+
+    .mainIndexPrincipal img{
+        width: 100%;
+    }
+
+    .mainIndexPrincipal h1{
+        font-size: 3em;
+    }
+
+    .mainIndexPrincipal p{
+        font-size: 16px;
+        margin: 0px 30px 30px 30px;
+    }
+
+    .mainIndexSecundaria500px{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .mainIndexSecundaria500px a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;       
+        font-weight: 500;
+    }
+
+    .mainIndexSecundaria500px a div{
+        width: 300px;
+        height: 80px;
+        display: flex;
+        align-items: start;  
+    }
+
+    .mainIndexSecundaria500px a div p{
+        background-color: rgba(255, 255, 255, 0.70);
+        display: inline-block;
+        width: 120px;
+        
+    }
+
+}
 
     /* Main productos */
 
 .mainProductos{
-    text-align: center;
-}
-
-.boxProductos{
-    display: inline-block;
-    margin: 10px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0px;
 }
 
 .boxProductos img{
-    width: 400px;
+    max-width: 400px;
     padding: 10px;
     border-radius: 15% 15% 0% 0%;
 }
@@ -182,6 +295,14 @@ h1{
 
     /* Main comunidad */
 
+
+.mainComunidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+
+
 .comunidadTextPrincipal{
     text-align: center;
     margin-bottom: 10px;
@@ -189,28 +310,23 @@ h1{
 
 .comunidadTextPrincipal p{
     font-size: 18px;
-    margin: 5px 0px;
+    margin: 5px 15px;
     font-weight: 500;
     color: #A85F00
 }
 
-.comunidadMedia{
-    padding: 20px 0px;
-    text-align: center;
+
+.comunidadCarousel{
+    width: 320px;
+    margin-top: 25px;
 }
 
-.comunidadMedia div{
-    display: inline-block;
-    margin: 20px 30px;
-}
-
-.comunidadMedia div h2{
-    margin-bottom: 10px;
-    text-align: left;
-}
 
 .comunidadSuscripcion{
-    margin: 20px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 15px 30px;
     text-align: center;
 }
 
@@ -224,7 +340,7 @@ h1{
 }
 
 .comunidadSuscripcion input{
-    margin-top: 10px;
+    padding: 0px 5px;
 }
 
 .comunidadSuscripcion button{
@@ -232,6 +348,59 @@ h1{
     font-weight: 500;
     cursor: pointer;
 }
+
+
+@media screen and (min-width:1100px){
+
+    .comunidadCarousel{
+        display: none;
+    }
+
+    .comunidadMedia{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+}
+
+
+@media screen and (max-width:1100px){
+    
+    .comunidadMedia{
+        display: none;
+    }
+
+    #idComunidadH1{
+        font-size: 3em;
+    }
+
+    .comunidadTextPrincipal p{
+        font-size: 1em;
+    }    
+
+}
+
+
+/* .comunidadMedia{
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.comunidadMedia div{
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+.comunidadMedia div h2{
+    margin-bottom: 10px;
+    text-align: left;
+} */
+
+
+
 
 
     /* Main quienessomos */
@@ -269,6 +438,7 @@ h1{
 
     /* Main contacto */
 
+
 .sectionDataContacto{
     max-width: 450px;
     margin: auto;
@@ -292,23 +462,48 @@ h1{
 }
 
 #idFormContacto{
-    max-width: 660px;
-    padding: 10px;
+    display: grid;
+    row-gap: 15px;
+    max-width: 1000px;
+    padding: 1em;
     margin: 50px auto;
     border-radius: 5px;
     border: 3px solid #54300057; 
-    background-color: #eba54a52;
+    background-color: rgb(51, 51, 51);
+    color: white;
 }
 
 #idFormContacto div{
-    margin: 7px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formDivImput{
+    row-gap: 15px;
+    column-gap: 20px;
+}
+
+.formDivTextarea p, .formDivButton p{
+    grid-column: 1 / 3;
 }
 
 .formInputData, .formTextareaData{
-    width: 300px;
+    background-color: rgba(245, 245, 245, 0.30);
+    padding: 0 5px;
     border-radius: 5px;
     border-color: rgb(150, 150, 150);
+    font-size: 16px;
+    color: white;
+    width: 100%;
+}
+
+.formInputData::placeholder, .formTextareaData::placeholder{
+    font-size: 16px;
+    color: rgb(190, 190, 190);
+}
+
+.formInputData{
+    height: 50px;
 }
 
 .formTextareaData{
@@ -319,21 +514,56 @@ h1{
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 5px;
-    background-color: #ffc375;
-    border-color: rgba(150, 150, 150, 0.5);
+    background-color: #ffd092;
+    border-color: rgba(150, 150, 150, 0.3);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    width: 100%;
+    height: 40px;
 }
 
-#idFormContacto legend{
-    font-size: 18px;
-    font-weight: 500;
+.formButton:hover{
+    background-color: #ffbf6c;
 }
+
 
 
 /* FOOTER */
 
 footer{
     padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer ul{
+    margin-top: 40px;
+}
+
+footer ul a{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(35, 35, 35);
+}
+
+footer ul a li{
+    list-style: none;
+}
+
+footer a i{
+    font-size: 1.3rem;
+    margin-right: 3px;
+}
+
+footer ul a:hover{
+    color: black;
+}
+
+footer ul a li:hover{
+    transform: scale(1.1);
+    font-weight: 500;
 }
 
 footer hr{
@@ -341,7 +571,7 @@ footer hr{
 }
 
 footer h3{
-    margin: 30px 0px 20px 0px;
+    margin: 20px 0px 40px 0px;
     font-size: 18px;
     text-align: center;
 }
